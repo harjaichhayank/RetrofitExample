@@ -16,10 +16,10 @@ public interface JsonPlaceHolderAPI {
             @Query("_sort") String sort,
             @Query("_order") String order,
             @Query("userId") Integer... userId //using varargs and not Integer[] and because using varargs we have to put it as the last argument
-            );
+    );
 
     @GET("posts")
-    Call<List<Post>> getPosts(@QueryMap Map<String,String> parameters);
+    Call<List<Post>> getPosts(@QueryMap Map<String, String> parameters);
 
     @GET("posts/{id}/comments")
     Call<List<Comments>> getComments(@Path("id") int postId);

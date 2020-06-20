@@ -66,8 +66,8 @@ public class MainActivity extends AppCompatActivity {
     private void getPosts() {
         Map<String,String> parameters = new HashMap<>();
         parameters.put("userId","1");
-        parameters.put("_sort","2");
-        parameters.put("_order","3");
+        parameters.put("_sort","id");
+        parameters.put("_order","desc");
 
         Call<List<Post>> call = jsonPlaceHolderApi.getPosts(parameters);
         /*Call<List<Post>> call = jsonPlaceHolderApi.getPosts("id","desc", 2,3,6);*/            //id using varargs
